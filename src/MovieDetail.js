@@ -1,10 +1,10 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const MovieDetail = () => {
   const { movieID } = useParams();
-
+  const navigate = useNavigate();
   const [movieDetail, setMovieDetail] = useState();
 
   useEffect(() => {
@@ -15,7 +15,9 @@ const MovieDetail = () => {
 
   return (
     <Box>
-  
+      <Button onClick={() => navigate(-1)} variant="contained" sx={{ background: "#992006", marginBottom: 3 }}>
+        Go back
+      </Button>
       <Typography variant="h3" component="h2" marginBottom={5}>
         {movieDetail?.Series_Title}
       </Typography>
