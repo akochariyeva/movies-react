@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #992006;
+}
+
+body,
+#root,
+html {
+  height: 100%;
+}
+
+.App {
+  background-image: url("./assets/vintage-film-strip-frame-reel-background_1017-23460.webp");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #992006;
+}
