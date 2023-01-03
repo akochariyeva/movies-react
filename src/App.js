@@ -6,6 +6,7 @@ import HomePage from "./HomePage";
 import MoviesPage from "./Movies";
 import ContactPage from "./ContactPage";
 import bgImage from "./assets/vintage-film-strip-frame-reel-background_1017-23460.webp";
+import MovieDetail from "./MovieDetail";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Routes>
               <Route exact element={<HomePage />} path="/" />
               <Route element={<MoviesPage />} path="/movies" />
+              <Route element={<MovieDetail />} path="/movies/:movieID" />
               <Route element={<ContactPage />} path="/contact" />
             </Routes>
           </Box>

@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
