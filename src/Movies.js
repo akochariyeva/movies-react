@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import MovieCard from "./MovieCard";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -12,17 +13,13 @@ const Movies = () => {
 
   return (
     <Box>
+      <Typography variant="h3" component="h2" marginBottom={5}>
+        Movies
+      </Typography>
       <Grid container spacing={2} direction="row" justify="flex-start" alignItems="flex-start">
         {movies.map((movie) => (
-          <Grid item xs={12} sm={6} md={3} key={movie.id}>
-            <Card>
-              <CardHeader title={movie.Series_Title} subheader={movie.Genre} />
-              <CardContent>
-                <Typography variant="h5" gutterBottom>
-                  Hello World
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={12} sm={6} md={4} key={movie.id}>
+            <MovieCard movie={movie} />
           </Grid>
         ))}
       </Grid>
