@@ -5,8 +5,12 @@ const Navbar = () => {
   return (
     <Box sx={{ textAlign: "center" }}>
       <List sx={{ display: "flex", justifyContent: "space-evenly" }}>
-        {navItems.map((item) => (
-          <NavLink to={item === "Home" ? "/" : item.toLowerCase()} style={({ isActive }) => (isActive ? { textDecoration: "underline" } : undefined)}>
+        {navItems.map((item, key) => (
+          <NavLink
+            key={key}
+            to={item === "Home" ? "/" : item.toLowerCase()}
+            style={({ isActive }) => (isActive ? { textDecoration: "underline" } : undefined)}
+          >
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item} />
