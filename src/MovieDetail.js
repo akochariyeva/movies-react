@@ -26,8 +26,11 @@ const MovieDetail = () => {
           <Box sx={{ height: 400, objectFit: "contain" }} component="img" src={movieDetail?.Poster_Link} />
         </Grid>
         <Grid item sm={6}>
-          <Typography variant="h5" component="h5">
-            {movieDetail?.Series_Title}
+          <Typography>
+            Overview:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.Overview.slice(0, 100)}
+            </Typography>
           </Typography>
           <Typography>
             IMDB:
@@ -35,12 +38,7 @@ const MovieDetail = () => {
               {movieDetail?.IMDB_Rating}
             </Typography>
           </Typography>
-          <Typography>
-            Overview:
-            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
-              {movieDetail?.Overview.slice(0, 100)}
-            </Typography>
-          </Typography>
+
           <Typography>
             Genre:
             <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
@@ -51,6 +49,42 @@ const MovieDetail = () => {
             Runtime:
             <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
               {movieDetail?.Runtime}
+            </Typography>
+          </Typography>
+          <Typography>
+            Year:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.Released_Year}
+            </Typography>
+          </Typography>
+          <Typography>
+            Director:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.Director}
+            </Typography>
+          </Typography>
+          <Typography>
+            Famous stars:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.Star1}, {movieDetail?.Star2}, {movieDetail?.Star3}, {movieDetail?.Star4}
+            </Typography>
+          </Typography>
+          <Typography>
+            Certificate:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.Certificate}
+            </Typography>
+          </Typography>
+          <Typography>
+            Gross:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.Gross}
+            </Typography>
+          </Typography>
+          <Typography>
+            Number of votes:
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movieDetail?.No_of_Votes}
             </Typography>
           </Typography>
         </Grid>

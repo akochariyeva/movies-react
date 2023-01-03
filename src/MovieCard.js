@@ -1,31 +1,45 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   return (
-    <Link to={`/movies/${movie.id}`}>
-      <Card>
-        <CardActionArea>
-          <CardMedia component="img" height="140" image={movie.Poster_Link} alt="Movie poster" />
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h6"
-              component="div"
-              sx={{ height: "60px", overflow: "hidden", display: "-webkit-box", "-webkit-line-clamp": "2", "-webkit-box-orient": "vertical" }}
-            >
-              {movie.Series_Title}
+    <Link to={`/movies/${movie?.id}`}>
+      <Box sx={{ boxShadow: " rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }} p={2}>
+        <Box display="flex" width={"100%"}>
+          <Box component="img" src={movie?.Poster_Link} />
+          <Box ml={3} display="flex" flexDirection="column" alignItems="flex-start" width={"100%"}>
+            <Typography component="h5" variant="h5">
+              {movie?.Series_Title}
             </Typography>
-            <Typography
-              sx={{ height: "120px", overflow: "hidden", display: "-webkit-box", "-webkit-line-clamp": "6", "-webkit-box-orient": "vertical" }}
-              variant="body2"
-              color="text.secondary"
-            >
-              {movie.Overview}
+            <Typography>
+              IMDB Rating:
+              <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+                {movie?.IMDB_Rating}
+              </Typography>
             </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
+            <Typography>
+              Genres:
+              <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+                {movie?.Genre}
+              </Typography>
+            </Typography>
+            <Typography>
+              Runtime:
+              <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+                {movie?.Runtime}
+              </Typography>
+            </Typography>
+          </Box>
+        </Box>
+        <Box mt={3}>
+          <Typography>
+            Overview
+            <Typography component="span" sx={{ marginLeft: 1, color: "black" }}>
+              {movie?.Overview.slice(0, 100)}
+            </Typography>
+          </Typography>
+        </Box>
+      </Box>
     </Link>
   );
 };

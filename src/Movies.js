@@ -18,7 +18,7 @@ const Movies = () => {
       </Typography>
       <Grid container spacing={2} direction="row" justify="flex-start" alignItems="flex-start">
         {movies.map((movie) => (
-          <Grid item xs={12} sm={6} md={4} key={movie.id}>
+          <Grid item xs={12} key={movie.id}>
             <MovieCard movie={movie} />
           </Grid>
         ))}
