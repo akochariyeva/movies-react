@@ -5,13 +5,15 @@ import Navbar from "./Navbar";
 import HomePage from "./HomePage";
 import MoviesPage from "./Movies";
 import ContactPage from "./ContactPage";
+import bgImage from "./assets/vintage-film-strip-frame-reel-background_1017-23460.webp";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Box sx={{ backgroundImage: `url(${bgImage})`, position: "fixed", width: "100%", height: "100%", zIndex: 0 }} />
         <Container maxWidth="md">
-          <Box sx={{ bgcolor: "white", height: "100vh" }}>
+          <Box sx={{ bgcolor: "white", padding: 2, position: "relative", zIndex: 1 }}>
             <Navbar />
             <Routes>
               <Route exact element={<HomePage />} path="/" />
