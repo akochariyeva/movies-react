@@ -2,7 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #992006;
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
 }
 
 body,
@@ -18,6 +21,36 @@ html {
 }
 
 a {
+  font-weight: 600;
   text-decoration: none;
-  color: #992006;
+  color: #edbf17;
+}
+
+.selected-item {
+  color: black;
+  background-color: #edbf17;
+}
+
+.selected-item span {
+  color: black;
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.rounder-border {
+  padding: 10px;
+  border: 2px solid #edbf17;
+  border-radius: 2px;
+}
+
+.rounder-border:hover {
+  transition: .2s ease-in-out;
+  background-color: #edbf17;
 }

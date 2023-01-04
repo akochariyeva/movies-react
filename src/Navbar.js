@@ -10,6 +10,7 @@ const Navbar = () => {
             key={key}
             to={item === "Home" ? "/" : item.toLowerCase()}
             style={({ isActive }) => (isActive ? { textDecoration: "underline" } : undefined)}
+            className={({ isActive }) => (isActive ? "selected-item" : null)}
           >
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>

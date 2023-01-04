@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import HomePage from "./HomePage";
 import MoviesPage from "./Movies";
 import ContactPage from "./ContactPage";
-import bgImage from "./assets/vintage-film-strip-frame-reel-background_1017-23460.webp";
+import bgImage from "./assets/imdb.jpg";
 import MovieDetail from "./MovieDetail";
 
 function App() {

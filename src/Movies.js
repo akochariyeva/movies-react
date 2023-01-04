@@ -13,7 +13,7 @@ const Movies = () => {
 
   return (
     <Box>
-      <Typography variant="h3" component="h2" marginBottom={5}>
+      <Typography  variant="h3" component="h3" sx={{ textAlign: "center", textTransform: "uppercase", paddingTop: "10px" }} marginBottom={5}>
         All Movies
       </Typography>
       <Grid

@@ -17,8 +17,8 @@ const ContactPage = () => {
 
   return (
     <Box>
-      <Typography variant="h3" component="h2">
-        Contact
+      <Typography variant="h3" component="h3" sx={{ textAlign: "center", textTransform: "uppercase", paddingTop: "10px" }}>
+        Contact Us
       </Typography>
       <Box component="form" onSubmit={handleSubmit}>
         <TextField fullWidth label="Your name" sx={{ margin: "10px 0" }} value={name} onChange={(e) => setName(e.target.value)} />
@@ -32,7 +32,7 @@ const ContactPage = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <Button type="submit" variant="contained" fullWidth sx={{ background: "#992006" }}>
+        <Button type="submit" variant="contained" fullWidth sx={{ background: "#edbf17" }}>
           Send
         </Button>
       </Box>
