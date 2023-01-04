@@ -29,7 +29,6 @@ const Movies = () => {
           </Grid>
         ))}
       </Grid>
-      {movies.map((movie) => movie.Series_Title)}
     </Box>
   );
 };
